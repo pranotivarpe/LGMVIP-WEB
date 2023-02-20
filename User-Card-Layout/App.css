@@ -1,0 +1,77 @@
+.App {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav-container {
+  box-shadow: 0px 5px 10px 0px #aaa;
+  background-color: #282c34;
+  min-height: 15vh;
+  width: 100%;
+  position: fixed;
+  z-index: 12;
+}
+
+.nav-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#brand_name {
+  order: 1;
+  display: flex;
+  font-size: 10vh;
+  color: white;
+  padding: 10px;
+  padding-left: 90px;
+}
+
+#button {
+  order: 2;
+  font-size: 4vh;
+  color: white;
+  background-color: #282c34;
+  border-style: hidden;
+  padding-right: 90px;
+  cursor: pointer;
+}
+
+.loading-img {
+  width: 75px;
+  height: 75px;
+}
+
+.user-details {
+  padding: 50px;
+  margin: 10px;
+  margin-top: 150px;
+  display: block;
+  font-size: 20px;
+  border: 1px solid darkgray;
+  width: 300px;
+  background-color: rgb(86, 93, 101);
+  text-align: center;
+  color: white;
+  border-radius: 30px;
+}
+
+.user-img {
+  width: 180px;
+  height: auto;
+  border-radius: 100px;
+}
+
+.user-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.loading-img {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
