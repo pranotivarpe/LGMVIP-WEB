@@ -1,0 +1,110 @@
+<!-- Calculator -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script lang="JavaScript">
+        //clear dispay
+        function clearDisplay() {
+            document.getElementById("display").value = "";
+        }
+        //factorial function
+        function factorial(n) {
+            if (n === 0) {
+                return 1;
+            }
+            return n * factorial(n - 1);
+        }
+        function factorialOf() {
+            var display = document.getElementById("display");
+            var value = parseFloat(display.value);
+            if (!isNaN(value)) {
+                display.value = factorial(value);
+            }
+        }
+
+        //Percentage function
+        function percentageOf() {
+            var display = document.getElementById("display");
+            var value = parseFloat(display.value);
+            if (!isNaN(value)) {
+                display.value = value / 100;
+            }
+        }
+        //solve '=' function
+        function solve() {
+            let x = document.getElementById("display").value
+            let y = math.evaluate(x)
+            document.getElementById("result").value = y
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <div class="heading">
+        <h1>Calculator</h1>
+    </div>
+    <div class="wrapper">
+        <table class="calcu">
+            <tr>
+                <td colspan="4"><input type="text" id="display"> </td>
+            </tr>
+            <tr>
+                <td><input type="button" value="C" onclick="clearDisplay()"></td>
+                <td><input type="button" value="x!" id="factorialOf" onclick="factorialOf()"></td>
+                <td><input type="button" value="%" id="percentage" onclick="percentageOf()"></td>
+                <td><input type="button" value="+" id="display+"
+                        onclick="document.getElementById('display').value+='+'"></td>
+            </tr>
+
+            <tr>
+                <td><input type="button" value="1" id="display1"
+                        onclick="document.getElementById('display').value+='1'"></td>
+                <td><input type="button" value="2" id="display2"
+                        onclick="document.getElementById('display').value+='2'"></td>
+                <td><input type="button" value="3" id="display3"
+                        onclick="document.getElementById('display').value+='3'"></td>
+                <td><input type="button" value="-" id="display-"
+                        onclick="document.getElementById('display').value+='-'"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="4" id="display4"
+                        onclick="document.getElementById('display').value+='4'"></td>
+                <td><input type="button" value="5" id="display5"
+                        onclick="document.getElementById('display').value+='5'"></td>
+                <td><input type="button" value="6" id="display6"
+                        onclick="document.getElementById('display').value+='6'"></td>
+                <td><input type="button" value="*" id="display*"
+                        onclick="document.getElementById('display').value+='*'"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="7" id="display7"
+                        onclick="document.getElementById('display').value+='7'"></td>
+                <td><input type="button" value="8" id="display8"
+                        onclick="document.getElementById('display').value+='8'"></td>
+                <td><input type="button" value="9" id="display9"
+                        onclick="document.getElementById('display').value+='9'"></td>
+                <td><input type="button" value="/" id="display/"
+                        onclick="document.getElementById('display').value+='/'"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="button" value="0" id="display0"
+                        onclick="document.getElementById('display').value+='0'"></td>
+                <td><input type="button" value="." id="display."
+                        onclick="document.getElementById('display').value+='.'"></td>
+                <td><input type="button" value="=" id="display=" onclick="document.getElementById('display').value=
+                    eval(document.getElementById('display').value)"></td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
